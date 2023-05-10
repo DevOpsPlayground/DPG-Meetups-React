@@ -2,9 +2,9 @@ import EventList from "../components/events/EventList";
 import { useNavigate } from "react-router-dom";
 import EventsSearch from "../components/events/EventSearch";
 import { useEffect, useState } from "react";
-import { getFeaturedEvents } from "../helpers/api";
+import { getAllEvents } from "../helpers/api";
 
-export default function Homepage() {
+export default function AllEventsPage() {
   const navigate = useNavigate();
   function findEventsHandler(year, month) {
     const fullPath = `/events/${year}/${month}`;
@@ -15,7 +15,7 @@ export default function Homepage() {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    getFeaturedEvents().then((events) => {
+    getAllEvents().then((events) => {
       setEvents(events);
     });
   }, []);
@@ -27,7 +27,7 @@ export default function Homepage() {
   return (
     <div className='Homepage'>
       <EventsSearch onSearch={findEventsHandler} />
-      <h1>FEATURED EVENTS</h1>
+      <h1>ALL EVENTS</h1>
       <EventList events={events} />
     </div>
   );
