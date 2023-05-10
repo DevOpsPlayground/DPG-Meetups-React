@@ -21,13 +21,13 @@ export default function Homepage() {
   }, []);
 
   if (!events.length) {
-    return <p>Loading...</p>
+    return <p>Loading...</p>;
   }
 
   return (
     <div className='Homepage'>
-      <EventsSearch onSearch={findEventsHandler}/>
-      <EventList events={events}/>
+      <EventsSearch onSearch={findEventsHandler} />
+      <EventList events={events} />
     </div>
   );
 }
