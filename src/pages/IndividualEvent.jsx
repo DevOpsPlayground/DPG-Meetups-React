@@ -25,7 +25,18 @@ export default function IndividualEventPage() {
   }
 
   if (!event) {
-    return <p>Loading...</p>;
+       return (
+         <div className="loading_container">
+           <div className="lds-ring">
+             {" "}
+             <div></div>
+             <div></div>
+             <div></div>
+             <div></div>
+           </div>
+           <p className="loading_text">Getting your events...</p>
+         </div>
+       );
   }
 
   return (

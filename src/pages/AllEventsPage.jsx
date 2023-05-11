@@ -21,13 +21,24 @@ export default function AllEventsPage() {
   }, []);
 
   if (!events.length) {
-    return <p>Loading...</p>;
+    return (
+      <div className="loading_container">
+        <div className="lds-ring">
+          {" "}
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <p className="loading_text">Getting your events...</p>
+      </div>
+    );
   }
 
   return (
-    <div className='Homepage'>
+    <div className="Homepage">
       <EventsSearch onSearch={findEventsHandler} />
-      <h1>ALL EVENTS</h1>
+      <h1 className="main_title">All Events</h1>
       <EventList events={events} />
     </div>
   );

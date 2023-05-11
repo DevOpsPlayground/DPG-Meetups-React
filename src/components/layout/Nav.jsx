@@ -1,18 +1,24 @@
 import { Link } from "react-router-dom";
-import pandalogo from "../../assets/logowhitetransparent.png";
 import styles from "./Nav.module.css";
+import { MdEventNote } from "react-icons/md";
+import logo from "../../assets/logowhitetransparent.png";
+
+
 
 export default function Nav() {
   return (
     <div className={styles.nav_bar}>
-      <Link to={"/"}>
+      <Link to={`/`}>
         <img
-          src={pandalogo}
+          src={logo}
           alt={"panda with glasses logo"}
           className={styles.panda_logo}
         ></img>
       </Link>
-      <Link to={"/events"}>All Events</Link>
+      <Link className={styles.all_events_container} to={`/events`}>
+        <MdEventNote size={60} />
+        <p className={styles.all_events_text}>All Events</p>
+      </Link>
     </div>
   );
 }
