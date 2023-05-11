@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   background-color: #1f2937;
-  grid-gap: 1px;
   width: 80%;
   margin: auto;
   overflow: hidden;
@@ -14,8 +13,9 @@
 }
 
 .event_list :last-child {
-  grid-column: span 2; /* Span the item across two columns */
+  grid-column: span 2; 
   border: none;
+  width: 50%;
 }
 
 @media (max-width: 768px) {
