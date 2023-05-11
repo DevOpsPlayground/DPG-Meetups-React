@@ -36,3 +36,8 @@ export async function getFilteredEvents(filteredYear, filteredMonth) {
 
   return filteredEvents;
 };
+
+export async function getFeaturedEvents() {
+  const allEvents = await getAllEvents();
+  return allEvents.filter((event => event.featured))
+};

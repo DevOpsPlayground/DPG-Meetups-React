@@ -6,7 +6,7 @@ import { IoLocation } from "react-icons/io5";
 import { MdAccessTimeFilled } from "react-icons/md";
 import audience from "../assets/audience.jpg"
 
-export default function IndividualEvent(props) {
+export default function IndividualEventPage() {
   const { event_id } = useParams();
   const [event, setEvent] = useState();
 
@@ -14,7 +14,7 @@ export default function IndividualEvent(props) {
     getEventById(event_id).then((data) => {
       setEvent(data);
     });
-  }, []);
+  }, [event_id]);
 
   if (isNaN(event_id)) {
     return (
