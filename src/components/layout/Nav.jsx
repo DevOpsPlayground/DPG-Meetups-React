@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
+import pandalogo from "../../assets/logowhitetransparent.png";
+import styles from "./Nav.module.css";
 
 export default function Nav() {
   return (
-    <div className='Nav'>
-      <Link to={`/`}>
-        <p>All Events</p>
+    <div className={styles.nav_bar}>
+      <Link to={"/"}>
+        <img
+          src={pandalogo}
+          alt={"panda with glasses logo"}
+          className={styles.panda_logo}
+        ></img>
       </Link>
     </div>
   );

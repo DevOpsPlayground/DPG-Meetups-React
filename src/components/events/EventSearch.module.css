@@ -1,0 +1,75 @@
+.control {
+  background-color: #364151;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 10px;
+}
+
+@media (max-width: 768px) {
+  .control {
+    width: 6rem;
+    height: 2rem;
+  }
+}
+
+.control select {
+  background-color: #364151;
+  border: none;
+  font-size: x-large;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .control select {
+    font-size: small;
+  }
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.go_btn {
+  background-color: transparent;
+  border: none;
+}
+
+.go_btn_icon {
+  height: 3.8rem;
+  width: auto;
+  color: rgb(151, 148, 148);
+}
+
+@media (max-width: 768px) {
+  .go_btn_icon {
+    height: 2.4rem;
+  }
+}
+
+.all_events {
+  background-color: rgb(151, 148, 148);
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  color: Black;
+  font-weight: bolder;
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .all_events {
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+}

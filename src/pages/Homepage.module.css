@@ -1,0 +1,18 @@
+.main_section {
+  width: 80%;
+  margin: auto;
+  border-radius: 40px;
+}
+
+.main_title {
+  font-size: 46px;
+  color: white;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .main_title {
+    font-size: xx-large;
+  }
+}

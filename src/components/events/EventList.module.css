@@ -1,0 +1,27 @@
+.event_list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #364151;
+  grid-gap: 1px;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 2px #364151 solid;
+  margin-top: 1.2rem;
+  margin-bottom: 10rem;
+  justify-items: center;
+}
+
+.event_list :last-child {
+  grid-column: span 2; /* Span the item across two columns */
+}
+
+@media (max-width: 768px) {
+  .event_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+}

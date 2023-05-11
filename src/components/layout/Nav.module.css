@@ -1,0 +1,19 @@
+.panda_logo {
+  height: 6rem;
+  width: auto;
+  margin: 0.2rem 2rem;
+}
+
+@media (max-width: 768px) {
+  .panda_logo {
+    height: 3rem;
+
+  }
+}
+
+.nav_bar {
+  background-color: #111828;
+  padding: 20px;
+  border-bottom: 2px #364151 solid;
+
+}
