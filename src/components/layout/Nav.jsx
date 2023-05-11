@@ -12,6 +12,7 @@ export default function Nav() {
           className={styles.panda_logo}
         ></img>
       </Link>
+      <Link to={"/events"}>All Events</Link>
     </div>
   );
 }
