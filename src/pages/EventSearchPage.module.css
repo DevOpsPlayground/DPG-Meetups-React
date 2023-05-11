@@ -19,7 +19,7 @@
 .event_search_page {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  background-color: #364151;
+  background-color: #1f2937;
   grid-gap: 1px;
   width: 80%;
   margin: auto;
