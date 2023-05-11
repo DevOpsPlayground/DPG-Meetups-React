@@ -17,7 +17,8 @@ export default function Homepage() {
   }
 
   return (
-    <div className="Homepage">
+    <div className='Homepage'>
+      <h1 className='main_title'>Welcome to DevOps Playground Events Page</h1>
       <h1 className={styles.main_title}>Featured Events</h1>
       <EventList events={featuredEvents} />
     </div>
