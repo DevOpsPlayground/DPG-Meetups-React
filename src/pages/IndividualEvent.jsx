@@ -16,13 +16,6 @@ export default function IndividualEventPage() {
     });
   }, [event_id]);
 
-  if (isNaN(event_id)) {
-    return (
-      <>
-        <p>Invalid URL</p>
-      </>
-    );
-  }
 
   if (!event) {
        return (

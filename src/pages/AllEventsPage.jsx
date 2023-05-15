@@ -37,8 +37,8 @@ export default function AllEventsPage() {
 
   return (
     <div className="Homepage">
+    <h1 className="main_title">All Events</h1>
       <EventsSearch onSearch={findEventsHandler} />
-      <h1 className="main_title">All Events</h1>
       <EventList events={events} />
     </div>
   );

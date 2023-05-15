@@ -9,6 +9,7 @@
   color: white;
   text-align: center;
   margin-top: 2rem;
+  padding: 3rem 0;
 }
 
 @media (max-width: 768px) {
