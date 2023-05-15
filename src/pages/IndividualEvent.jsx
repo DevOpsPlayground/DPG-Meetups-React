@@ -5,6 +5,7 @@ import styles from "./IndividualEvent.module.css";
 import { IoLocation } from "react-icons/io5";
 import { MdAccessTimeFilled } from "react-icons/md";
 import audience from "../assets/audience.jpg"
+import Loader from "../components/Loader";
 
 export default function IndividualEventPage() {
   const { event_id } = useParams();
@@ -18,18 +19,7 @@ export default function IndividualEventPage() {
 
 
   if (!event) {
-       return (
-         <div className="loading_container">
-           <div className="lds-ring">
-             {" "}
-             <div></div>
-             <div></div>
-             <div></div>
-             <div></div>
-           </div>
-           <p className="loading_text">Getting your events...</p>
-         </div>
-       );
+       return  <Loader/>
   }
 
   return (

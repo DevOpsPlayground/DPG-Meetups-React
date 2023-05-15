@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import EventsSearch from "../components/events/EventSearch";
 import { useEffect, useState } from "react";
 import { getAllEvents } from "../helpers/api";
+import Loader from "../components/Loader";
 
 export default function AllEventsPage() {
   const navigate = useNavigate();
@@ -21,18 +22,7 @@ export default function AllEventsPage() {
   }, []);
 
   if (!events.length) {
-    return (
-      <div className="loading_container">
-        <div className="lds-ring">
-          {" "}
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <p className="loading_text">Getting your events...</p>
-      </div>
-    );
+    return  <Loader/>
   }
 
   return (

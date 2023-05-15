@@ -2,6 +2,7 @@ import EventList from "../components/events/EventList";
 import { useEffect, useState } from "react";
 import styles from "./Homepage.module.css";
 import { getFeaturedEvents } from "../helpers/api";
+import Loader from "../components/Loader";
 
 export default function Homepage() {
   const [featuredEvents, setFeaturedEvents] = useState([]);
@@ -13,18 +14,7 @@ export default function Homepage() {
   }, []);
 
   if (!featuredEvents.length) {
-    return (
-      <div className='loading_container'>
-        <div className='lds-ring'>
-          {" "}
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <p className='loading_text'>Getting your events...</p>
-      </div>
-    );
+    return <Loader/>
   }
 
   return (
