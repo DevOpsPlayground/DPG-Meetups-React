@@ -1,23 +1,30 @@
 .event_card {
-  border: 1px solid #364151;
+  border-bottom: 1px solid #364151;
   border-left: 1px solid #364151;
   border-right: 1px solid #364151;
   display: flex;
   flex-direction: column;
   background-color: #1f2937;
   width: 100%;
-  padding: 10px 10px;
 }
 
 .event_card_link {
-  font-size: x-large;
+  font-size: 1.4rem;
   font-weight: bolder;
   margin-left: 1.5rem;
+  margin-right: 1.5rem;
   color: white;
   text-decoration: none;
   margin-bottom: 0.4rem;
+  position: relative;
+  display: flex;
 }
-@media (max-width: 768px) {
+
+.emoji {
+  margin-right: 0.4rem;
+}
+
+@media (max-width: 928px) {
   .event_card_link {
     font-size: medium;
     margin-bottom: 0.6rem;
@@ -37,11 +44,12 @@
   margin-left: 1.5rem;
   margin-bottom: 1.5rem;
   margin-top: 1.5rem;
+  margin-right: 1.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 928px) {
   .event_card_date {
-    margin: 1rem 1.5rem;
+    margin-right: 1rem 1.5rem;
   }
 }
 
@@ -58,7 +66,7 @@
   align-items: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 928px) {
   .event_card_location {
     font-size: small;
     margin-bottom: 0.6rem;
@@ -66,11 +74,8 @@
 }
 
 .event_card_location_text {
-    margin-left: 0.4rem;
-  }
-
-
-
+  margin-left: 0.4rem;
+}
 
 .event_card_presenter {
   display: flex;
@@ -80,8 +85,13 @@
   margin: 1.5rem;
   border-radius: 4px;
   padding: 4px;
-  width: fit-content;
+  width: 100%;
 }
+
+.event_card_presenter_info {
+  flex-grow: 1;
+}
+
 .event_card_logo {
   background-color: white;
   border-radius: 50%;
@@ -93,12 +103,12 @@
 
 .event_card_presenter_name {
   color: white;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: bolder;
   margin-bottom: 0.2rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 928px) {
   .event_card_presenter_name {
     font-size: medium;
   }

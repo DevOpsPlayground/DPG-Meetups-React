@@ -37,7 +37,7 @@ export default function IndividualEventPage() {
       </div>
       
       <img src={audience} alt="crowd sat with laptops in office" className={styles.image}></img>
-      <p className={styles.description}>{event.description}</p>
+      <div dangerouslySetInnerHTML={{__html: event.description}} className={styles.description}></div>
     </div>
   );
 }

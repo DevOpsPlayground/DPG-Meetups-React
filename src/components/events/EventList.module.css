@@ -1,7 +1,8 @@
 .event_list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2);
   background-color: #1f2937;
+  grid-gap: 1px;
   width: 80%;
   margin: auto;
   overflow: hidden;
@@ -12,16 +13,21 @@
   justify-items: center;
 }
 
-.event_list :last-child {
-  grid-column: span 2; 
-  border: none;
-  width: 50%;
-}
-
 @media (max-width: 768px) {
   .event_list {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+}
+
+.event_list :last-child {
+  grid-column: span 2;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .event_list > :last-child {
+    width: 50%;
   }
 }
